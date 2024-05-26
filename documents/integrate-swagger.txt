@@ -1,0 +1,12 @@
+
+1. Add bellow dependency to activate swagger in "spring-boot-3"
+    <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+        <version>2.0.3</version>
+    </dependency>
+
+2. Use bellow url to access swagger of attached application
+    http://localhost:8080/swagger-ui/index.html
+
+3.

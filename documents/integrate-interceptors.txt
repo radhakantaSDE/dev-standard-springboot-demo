@@ -1,0 +1,9 @@
+
+1. We can't read body directly here --> As, request inputStream can read once So, if we will read once then, servlet can't read it hence, it will fail
+
+2. For above issue we can use @ControllerAdvice of type "RequestBodyAdviceAdapter"
+   similarly, to intercept response we can use ResponseBodyAdvice<Object>
+
+3. Alternative, use of "ClientHttpRequestInterceptor" implementation and override intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) method
+
+4.

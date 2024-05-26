@@ -1,0 +1,23 @@
+
+
+1. slf4j(impl of log4j2) log4j2 <-- logback(enhanced version of log4j) <-- log4j
+2. By default, spring-boot-3 uses logback but, to override with log4j2 you have to use bellow override
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <exclusions>
+            <exclusion>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-logging</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-log4j2</artifactId>
+    </dependency>
+
+3. log4j2 has facility for asynchronous logging -----> Check this
+4. To use custom log formatting message we can use log4j2.xml or log4j2-spring.xml
+5. To use MDC value in log ---> Add a mdc value ---> use %X{tracking-id} in custom log formatting file
+
